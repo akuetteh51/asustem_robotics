@@ -16,9 +16,9 @@ class Sensor extends StatelessWidget {
       margin: EdgeInsets.only(left: 43, right: 43, top: 10),
       height: 193,
       decoration: BoxDecoration(
-          color: Colors.white30, borderRadius: BorderRadius.circular(30)),
+          color: Colors.white30, borderRadius: BorderRadius.circular(38)),
       child: Row(
-        // crossAxisAlignment: CrossAxisAlignment.start,
+
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Spacer(),
@@ -43,7 +43,8 @@ class Sensor extends StatelessWidget {
                             fontSize: 36,
                             color: Colors.white,
                             fontWeight: FontWeight.w800),
-                      ),
+                      ) 
+                      ,
                       Text(
                         Unit,
                         style: TextStyle(
