@@ -22,7 +22,7 @@ class Sensor extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Spacer(),
-          Container(
+          Container(color: Colors.amber,
             height: 85,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,26 +34,24 @@ class Sensor extends StatelessWidget {
                       color: Colors.white,
                       fontWeight: FontWeight.w800),
                 ),
-                Expanded(
-                  child: Row(
-                    children: [
-                      Text(
-                        Data,
-                        style: TextStyle(
-                            fontSize: 36,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w800),
-                      ) 
-                      ,
-                      Text(
-                        Unit,
-                        style: TextStyle(
-                            fontSize: 36,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w800),
-                      ),
-                    ],
-                  ),
+                Row(
+                  children: [
+                    Text(
+                      Data,
+                      style: TextStyle(
+                          fontSize: 36,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w800),
+                    ) 
+                    ,
+                    Text(
+                      Unit,
+                      style: TextStyle(
+                          fontSize: 36,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w800),
+                    ),
+                  ],
                 )
               ],
             ),

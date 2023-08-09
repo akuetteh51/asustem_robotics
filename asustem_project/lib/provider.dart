@@ -16,27 +16,22 @@ class Sensor_provider extends ChangeNotifier {
 
     final response = await dio.get(
         'https://vitalcheck-api-v2.onrender.com/api/sensorData/8efea8c7-1821-451b-b312-5a597d7af3a1');
-    print("check this ${response.statusCode}");
-    print(response.data);
    
     if(response.statusCode == 200 && response.data['status'] == 204){
 
       _message = response.data['SensorData'];
       _status_code = response.data['status'] ;
-      print("from if  $_sensor_data");
       notifyListeners();
     }
     else if(response.statusCode == 200 && response.data['status'] == 200){
  _sensor_data = response.data['SensorData'];
  _status_code = response.data['status'] ;
-  print("from else if $_sensor_data");
   notifyListeners();
 
     }
      else{
       
     _status_code = response.statusCode;
-   print("from else $_sensor_data");
     notifyListeners();
     }
    
